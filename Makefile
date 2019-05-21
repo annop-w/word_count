@@ -13,7 +13,7 @@ help:
 	@echo "       make clean - clean test data and temporary files"
 
 run:
-	@echo "Do text analysis for directory ${TESTDATA_DIR}"
+	@echo "Do text analysis for directory ${DATASET_DIR}"
 #set LANG environment variable to en_GB.UTF-8 in case it's not set
 #this is for handling non-ascii characters in the review data
 	@export LANG=en_GB.UTF-8 ; python3 run_analysis.py ${DATASET_DIR} ${REPORT_DIR}

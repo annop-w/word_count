@@ -8,9 +8,15 @@ SHELL := /bin/bash
 .PHONY: test run clean
 
 help:
-	@echo "USAGE: make run - to run an analysis for text files in a directory specified by DATASET_DIR"
-	@echo "       make test - to generate test data and test analysis script"
-	@echo "       make clean - clean test data and temporary files"
+	@echo "USAGE: make run   - Run an analysis for all text files in a directory under {DATASET_DIR} set in"
+	@echo "                    Makefile. Report files are put under {REPORT_DIR}. In addition, a file"
+	@echo "                    named \"report.pdf\" is created to visualize 10 most frequent words used in all"
+	@echo "                    files using a bar chart."
+	@echo "       make test  - Generate test data under {TESTDATA_DIR}, do analysis, and compare results"
+	@echo "                    to known solutions. Solutions are written out under {TESTSOLUTION_DIR}."
+	@echo "                    The number of test passes set by {NO_OF_TEST_PASS} in Makefile."
+	@echo "       make clean - Clean test data, report files, and unnecessary files and folders."
+	@echo "       make help  - Print this usage message."
 
 run:
 	@echo "Do text analysis for directory ${DATASET_DIR}"
@@ -41,7 +47,7 @@ test:
 	 done
 
 clean:
-	@rm -rf ${TESTDATA_DIR} ${TESTSOLUTION_DIR} ${REPORT_DIR} *~ *.pyc __pycache__ report.pdf 
+	@rm -rf ${TESTDATA_DIR} ${TESTSOLUTION_DIR} ${REPORT_DIR} *~ *.pyc __pycache__ #report.pdf 
 
 
 

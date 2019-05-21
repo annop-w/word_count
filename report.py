@@ -16,17 +16,23 @@ def plot_top_words(top_words):
 
         ax.tick_params(axis='both',which='both',labelsize=20)
         ax.yaxis.set_tick_params(labelsize=20)
-        ax.set_xlabel('Frequency',fontsize=20)
-        ax.set_title('10 most frequent words',fontsize=25)
+        ax.set_title('10 most frequent words',fontsize=25,weight='bold')
+        ax.xaxis.set_tick_params(rotation=30)
+        ax.set_xlabel('Frequency',fontsize=20,weight='bold')
 
         word = [x[0] for x in top_words]
         freq = [x[1] for x in top_words]
-        ax.barh(word, freq, height=0.35)
 
+        ax.barh(range(len(word)),freq,height=0.5,edgecolor='k')
+        plt.yticks(range(len(word)),word)
+            
         plt.gca().invert_yaxis()
         fig.savefig('report.pdf',bbox_inches='tight')
 
+    print('----------------------')
     print('10 most frequent words')
+    print('----------------------')
     for w in top_words:
         print(w[0] , w[1])
+    print('----------------------')
         

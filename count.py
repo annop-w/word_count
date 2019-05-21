@@ -17,17 +17,17 @@ def word_count(data_path, report_path, n_words):
 
     # loop over files, analyse, and make reports
     for files in data_files:
-        review_text = open(data_path+files,"r").read()
+        long_text = open(data_path+files,"r").read()
 
-        review_text = clean_text(review_text) # pass text for cleaning
+        long_text = clean_text(long_text) # pass text for cleaning
 
-        review_words = review_text.split() # split text into words using space
+        word_list = long_text.split() # split text into words using space
         
         word_frequency = {} # initialize empty dictionary for word counts in each file
 
         # add words to both dictionaries and count
-        add_to_dict(word_frequency, review_words)
-        add_to_dict(all_word_frequency, review_words)
+        add_to_dict(word_frequency, word_list)
+        add_to_dict(all_word_frequency, word_list)
 
         # sort the frequency in descending order
         # then sort alphabetically if the frequency is equal

@@ -47,7 +47,7 @@ test:
 	 done
 
 clean:
-	@rm -rf ${TESTDATA_DIR} ${TESTSOLUTION_DIR} ${REPORT_DIR} *~ *.pyc __pycache__ #report.pdf 
+	@rm -rf ${TESTDATA_DIR} ${TESTSOLUTION_DIR} ${REPORT_DIR} *~ *.pyc __pycache__ report.pdf 
 
 
 

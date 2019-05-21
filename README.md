@@ -98,4 +98,4 @@ https://ai.stanford.edu/~amaas/data/sentiment/
 
 We use only the data of 12500 positive reviews in this project. Here is a plot showing the analysis result. 
 
-![Result](https://github.com/annop-w/word_count/blob/master/report.pdf)
+![Result from movie reviews dataset](https://github.com/annop-w/word_count/blob/master/report.png)

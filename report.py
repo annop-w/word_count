@@ -28,6 +28,7 @@ def plot_top_words(top_words):
             
         plt.gca().invert_yaxis()
         fig.savefig('report.pdf',bbox_inches='tight')
+        fig.savefig('report.png',bbox_inches='tight')
 
     print('----------------------')
     print('10 most frequent words')
